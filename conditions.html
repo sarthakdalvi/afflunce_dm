@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DM Automations | Pricing</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
+    <!-- AOS CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <!-- Swiper Slider -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!-- Font Awesome 6 Pro -->
+    <link rel="stylesheet" href="fontawesome-pro/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+
+    <style>
+        :root{
+            --bg:#ffffff;--muted:#f3f4f6;--line:#e5e7eb;--text:#111827;
+            --text-2:#4b5563;--primary:#4f46e5;--primary-2:#eef2ff;
+            --radius:14px;
+        }
+        body{margin:0;font:16px/1.55 system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial,sans-serif;color:var(--text);background:var(--bg);}
+
+        /* Layout */
+        .legal-wrap{max-width:1100px;margin:32px auto;padding:0 16px;}
+        .legal-card{
+            display:grid;grid-template-columns:240px 1fr;gap:28px;
+            background:#fff;
+            overflow:hidden;
+        }
+
+        /* Sidebar */
+        .tabs2{
+            background:var(--muted);
+            padding:16px;
+            height: fit-content;
+        }
+        .tabs2 h3{margin:4px 8px 12px;font-size:14px;color:var(--text-2);letter-spacing:.02em}
+        .tablist{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:8px}
+        .tab-btn{
+            display:flex;align-items:center;gap:10px;
+            width:100%;border:none; font-size: 14px;
+            background:transparent;color:#000;cursor:pointer;font-weight:500;text-align:left;
+            transition: all 0.3s;
+        }
+        .tab-btn:hover{background:transparent; color:#9C5AFE;}
+        .tab-btn[aria-selected="true"]{
+            background:transparent;color:#9C5AFE;
+            text-decoration: underline; text-underline-offset: 5px;
+        }
+
+        /* Content area */
+        .panel{
+            display:none;
+            padding: 0 28px 28px 28px;
+            min-height:520px;
+        }
+        .panel[aria-hidden="false"]{display:block;}
+        .panel h1{margin:0 0 8px; font-size: 28px; color: #000; font-weight: 700;}
+        .panel h3{margin:0 0 8px; font-size: 24px; color: #000; font-weight: 600;}
+        .panel .effective{color:#4B5563;font-size:12px;margin-bottom:22px; margin-top: 10px; font-weight: 400;}
+        .toc{margin:15px 0 30px;padding:0 0 0 18px}
+        .toc li{color: #4b5563; font-size: 14px; font-weight: 400;}
+        .panel p{color:#4B5563; font-size: 14px; font-weight: 400;}
+
+        .toc.num{list-style: decimal;}
+        .toc.disc{list-style: disc;}
+
+        .gap-100fix{margin-top: 100px !important;}
+        .legal{ color: #000; font-size: 22px; font-weight: 600; margin-bottom: 20px; }
+        .last-text{font-size: 14px; color: #000 !important; font-weight: 400;}
+
+        /* Mobile: tabs bar on top */
+        @media (max-width: 820px){
+            .legal-card{grid-template-columns:1fr;}
+            .tablist{flex-direction:column;flex-wrap:nowrap;overflow:auto;padding-bottom:6px}
+            .tab-btn{white-space:nowrap}
+            .panel h1{font-size: 22px;}
+            .panel h3{font-size: 20px;}
+        }
+    </style>
+</head>
+<body>
+    <div class="top-nav">
+        <marquee scrollamount="10"><p class="top-text">🎁 100% free access till Dec 30 — unlimited replies, no limits 🚫, and exciting updates launching soon 🚀</p></marquee>
+    </div>
+    <header class="sticky">
+        <nav class="nav-wrapper">
+            <div class="logo">
+                <a href="#"><img src="images/new-logo.png" class="logo"></a>
+                <!-- <p class="logo-under-text">DM Automations</p> -->
+            </div>
+
+           <div class="logo">
+                <a href="#" class="btn btn-grey2 desktop">Sign In</a>
+                <a href="#" class="btn btn-purple">Start for Free</a>
+            </div>
+        </nav>
+    </header>
+
+    <div class="legal-wrap gap-100fix">
+        <h3 class="legal">Legal</h3>
+        <div class="legal-card" id="legalTabs">
+
+            <!-- Sidebar tabs -->
+            <aside class="tabs2">
+                <ul role="tablist" class="tablist">
+                    <li><button class="tab-btn" role="tab" id="tab-terms"   aria-controls="panel-terms"   aria-selected="true"  data-target="terms">Terms of Services</button></li>
+                    <li><button class="tab-btn" role="tab" id="tab-privacy" aria-controls="panel-privacy" aria-selected="false" data-target="privacy">Privacy Policy</button></li>
+                    <li><button class="tab-btn" role="tab" id="tab-cookies" aria-controls="panel-cookies" aria-selected="false" data-target="cookies">Cookie Statement</button></li>
+                </ul>
+            </aside>
+
+            <!-- Panels -->
+            <section>
+
+                <!-- Terms of Service STARTS -->
+                <article id="panel-terms" class="panel" role="tabpanel" aria-labelledby="tab-terms" aria-hidden="false">
+                    <hr class="mt-0">
+                    <h1>Terms of Services</h1>
+                    <div class="effective">Effective date: Month, DD YYYY</div>
+
+                    <h3 class="mt-5">AGREEMENT TO OUR LEGAL TERMS</h3>
+
+                    <p class="mt-3">We are Realkart Klues Pvt Ltd ("Company," "we," "us," "our").</p>
+                    <p class="mt-2">We operate, as well as any other related products and services that refer or link to these legal terms (the "Legal Terms") (collectively, the "Services").</p>
+                    <p class="mt-2">You can contact us by email at <a href="#">support@afflunce.in</a>.</p>
+
+                    <p class="mt-2">These Legal Terms constitute a legally binding agreement made between you, 
+                        whether personally or on behalf of an entity ("you"), and Realkart Klues, 
+                        concerning your access to and use of the Services. You agree that by accessing the Services, 
+                        you have read, understood, and agreed to be bound by all of these Legal Terms. 
+                        <strong>IF YOU DO NOT AGREE WITH ALL OF THESE LEGAL TERMS, THEN YOU ARE EXPRESSLY 
+                        PROHIBITED FROM USING THE SERVICES AND YOU MUST DISCONTINUE USE IMMEDIATELY.</strong></p>
+
+                    <p class="mt-2">Supplemental terms and conditions or documents that may be posted on the Services from time to time are hereby expressly incorporated herein by reference. We reserve the right, in our sole discretion, to make changes or modifications to these Legal Terms at any time and for any reason. We will alert you about any changes by updating the "Last updated" date of these Legal Terms, and you waive any right to receive specific notice of each such change. It is your responsibility to periodically review these Legal Terms to stay informed of updates. You will be subject to, and will be deemed to have been made aware of and to have accepted, the changes in any revised Legal Terms by your continued use of the Services after the date such revised Legal Terms are posted.</p>
+                
+                    <p class="mt-2">We recommend that you print a copy of these Legal Terms for your records.</p>
+
+                    <hr>
+
+                    <h3>Table of Contents</h3>
+                    <ol class="toc num">
+                        <li class="mt-2">OUR SERVICES</li>
+                        <li class="mt-2">INTELLECTUAL PROPERTY RIGHTS</li>
+                        <li class="mt-2">USER REPRESENTATIONS</li>
+                        <li class="mt-2">PROHIBITED ACTIVITIES</li>
+                        <li class="mt-2">USER GENERATED CONTRIBUTIONS</li>
+                        <li class="mt-2">CONTRIBUTION LICENSE</li>
+                        <li class="mt-2">SERVICES MANAGEMENT</li>
+                        <li class="mt-2">TERM AND TERMINATION</li>
+                        <li class="mt-2">MODIFICATIONS AND INTERRUPTIONS</li>
+                        <li class="mt-2">GOVERNING LAW</li>
+                        <li class="mt-2">DISPUTE RESOLUTION</li>
+                        <li class="mt-2">CORRECTIONS</li>
+                        <li class="mt-2">DISCLAIMER</li>
+                        <li class="mt-2">LIMITATIONS OF LIABILITY</li>
+                        <li class="mt-2">INDEMNIFICATION</li>
+                        <li class="mt-2">USER DATA</li>
+                        <li class="mt-2">ELECTRONIC COMMUNICATIONS, TRANSACTIONS, AND SIGNATURES</li>
+                        <li class="mt-2">MISCELLANEOUS</li>
+                        <li class="mt-2">CONTACT US</li>
+                    </ol>
+
+                    <hr>
+
+                    <h3 class="mt-4">1. OUR SERVICES</h3>
+                    <p class="mt-3">The information provided when using the Services is not intended for 
+                        distribution to or use by any person or entity in any jurisdiction or country where 
+                        such distribution or use would be contrary to law or regulation or which would subject 
+                        us to any registration requirement within such jurisdiction or country. Accordingly, 
+                        those persons who choose to access the Services from other locations do so on their 
+                        own initiative and are solely responsible for compliance with local laws, if and to 
+                        the extent local laws are applicable.</p>
+
+                    <hr>
+
+                    <h3 class="mt-4">2. INTELLECTUAL PROPERTY RIGHTS</h3>
+                    <h3 class="mt-2">Our intellectual property</h3>
+
+                    <p class="mt-3">We are the owner or the licensee of all intellectual property rights in our Services, including all source code, databases, functionality, software, website designs, audio, video, text, photographs, and graphics in the Services (collectively, the "Content"), as well as the trademarks, service marks, and logos contained therein (the "Marks").</p>
+                    <p class="mt-2">Our Content and Marks are protected by copyright and trademark laws (and various other intellectual property rights and unfair competition laws) and treaties around the world.</p>
+                    <p class="mt-2">The Content and Marks are provided in or through the Services "AS IS" for your personal, non-commercial use or internal business purpose only.</p>
+
+                    <h3 class="mt-3">Your use of our Services</h3>
+
+                    <p class="mt-3 mb-0">Subject to your compliance with these Legal Terms, including the "PROHIBITED ACTIVITIES" section below, we grant you a non-exclusive, non-transferable, revocable license to:</p>
+                    <ol class="toc disc">
+                        <li class="mt-2">Access the Services; and</li>
+                        <li class="mt-2">Download or print a copy of any portion of the Content to which you have properly gained access, solely for your personal, non-commercial use or internal business purpose.</li>
+                    </ol>
+
+                    <p class="mt-3">Except as set out in this section or elsewhere in our Legal Terms, no part of the Services and no Content or Marks may be copied, reproduced, aggregated, republished, uploaded, posted, publicly displayed, encoded, translated, transmitted, distributed, sold, licensed, or otherwise exploited for any commercial purpose whatsoever, without our express prior written permission.</p>
+                    <p class="mt-2">If you wish to make any use of the Services, Content, or Marks other than as set out in this section or elsewhere in our Legal Terms, please address your request to: support@afflunce.in. If we ever grant you the permission to post, reproduce, or publicly display any part of our Services or Content, you must identify us as the owners or licensors of the Services, Content, or Marks and ensure that any copyright or proprietary notice appears or is visible on posting, reproducing, or displaying our Content.</p>
+                    <p class="mt-2">We reserve all rights not expressly granted to you in and to the Services, Content, and Marks.</p>
+                    <p class="mt-2">Any breach of these Intellectual Property Rights will constitute a material breach of our Legal Terms and your right to use our Services will terminate immediately.</p>
+
+                    <hr>
+
+                    <h3 class="mt-4">3. USER REPRESENTATIONS</h3>
+                    <p class="mt-3 mb-0">By using the Services, you represent and warrant that:</p>
+                    <ol class="toc disc">
+                        <li class="mt-2">You have the legal capacity and you agree to comply with these Legal Terms.</li>
+                        <li class="mt-2">You are not a minor in the jurisdiction in which you reside.</li>
+                        <li class="mt-2">You will not access the Services through automated or non-human means, whether through a bot, script or otherwise.</li>
+                        <li class="mt-2">You will not use the Services for any illegal or unauthorized purpose.</li>
+                        <li class="mt-2">Your use of the Services will not violate any applicable law or regulation.</li>
+                    </ol>
+
+                    <p class="mt-3">If you provide any information that is untrue, inaccurate, not current, or incomplete, we have the right to suspend or terminate your account and refuse any and all current or future use of the Services (or any portion thereof).</p>
+
+                    <hr>
+
+                    <h3 class="mt-4">4. PROHIBITED ACTIVITIES</h3>
+                    <p class="mt-3">You may not access or use the Services for any purpose other than that for which we make the Services available. The Services may not be used in connection with any commercial endeavors except those that are specifically endorsed or approved by us.</p>
+                    <p class="mt-3 mb-0">As a user of the Services, you agree not to:</p>
+                    <ol class="toc disc">
+                        <li class="mt-2">Systematically retrieve data or other content from the Services to create or compile, directly or indirectly, a collection, compilation, database, or directory without written permission from us.</li>
+                        <li class="mt-2">Trick, defraud, or mislead us and other users, especially in any attempt to learn sensitive account information such as user passwords.</li>
+                        <li class="mt-2">Circumvent, disable, or otherwise interfere with security-related features of the Services, including features that prevent or restrict the use or copying of any Content or enforce limitations on the use of the Services and/or the Content contained therein.</li>
+                        <li class="mt-2">Disparage, tarnish, or otherwise harm, in our opinion, us and/or the Services.</li>
+                        <li class="mt-2">Use any information obtained from the Services in order to harass, abuse, or harm another person.</li>
+                        <li class="mt-2">Make improper use of our support services or submit false reports of abuse or misconduct.</li>
+                        <li class="mt-2">Use the Services in a manner inconsistent with any applicable laws or regulations.</li>
+                        <li class="mt-2">Engage in unauthorized framing of or linking to the Services.</li>
+                        <li class="mt-2">Upload or transmit (or attempt to upload or to transmit) viruses, Trojan horses, or other material, including excessive use of capital letters and spamming (continuous posting of repetitive text), that interferes with any party’s uninterrupted use and enjoyment of the Services or modifies, impairs, disrupts, alters, or interferes with the use, features, functions, operation, or maintenance of the Services.</li>
+                        <li class="mt-2">Engage in any automated use of the system, such as using scripts to send comments or messages, or using any data mining, robots, or similar data gathering and extraction tools.</li>
+                        <li class="mt-2">Delete the copyright or other proprietary rights notice from any Content.</li>
+                        <li class="mt-2">Attempt to impersonate another user or person or use the username of another user.</li>
+                        <li class="mt-2">Upload or transmit (or attempt to upload or to transmit) any material that acts as a passive or active information collection or transmission mechanism, including without limitation, clear graphics interchange formats ("gifs"), 1×1 pixels, web bugs, cookies, or other similar devices (sometimes referred to as "spyware" or "passive collection mechanisms" or "pcms").</li>
+                        <li class="mt-2">Interfere with, disrupt, or create an undue burden on the Services or the networks or services connected to the Services.</li>
+                        <li class="mt-2">Harass, annoy, intimidate, or threaten any of our employees or agents engaged in providing any portion of the Services to you.</li>
+                        <li class="mt-2">Attempt to bypass any measures of the Services designed to prevent or restrict access to the Services, or any portion of the Services.</li>
+                        <li class="mt-2">Copy or adapt the Services' software, including but not limited to Flash, PHP, HTML, JavaScript, or other code.</li>
+                        <li class="mt-2">Except as permitted by applicable law, decipher, decompile, disassemble, or reverse engineer any of the software comprising or in any way making up a part of the Services.</li>
+                        <li class="mt-2">Except as may be the result of standard search engine or Internet browser usage, use, launch, develop, or distribute any automated system, including without limitation, any spider, robot, cheat utility, scraper, or offline reader that accesses the Services, or use or launch any unauthorized script or other software.</li>
+                        <li class="mt-2">Use a buying agent or purchasing agent to make purchases on the Services.</li>
+                        <li class="mt-2">Make any unauthorized use of the Services, including collecting usernames and/or email addresses of users by electronic or other means for the purpose of sending unsolicited email, or creating user accounts by automated means or under false pretenses.</li>
+                        <li class="mt-2">Use the Services as part of any effort to compete with us or otherwise use the Services and/or the Content for any revenue-generating endeavor or commercial enterprise.</li>
+                    </ol>
+
+                    <p class="mt-3">If you provide any information that is untrue, inaccurate, not current, or incomplete, we have the right to suspend or terminate your account and refuse any and all current or future use of the Services (or any portion thereof).</p>
+
+                    <hr>
+
+                    <h3 class="mt-4">5. USER GENERATED CONTRIBUTIONS</h3>
+
+                    <p class="mt-3">The Services does not offer users to submit or post content. We may provide you with the opportunity to create, submit, post, display, transmit, perform, publish, distribute, or broadcast content and materials to us or on the Services, including but not limited to text, writings, video, audio, photographs, graphics, comments, suggestions, or personal information or other material (collectively, "Contributions"). Contributions may be viewable by other users of the Services and through third-party websites. When you create or make available any Contributions, you thereby represent and warrant that:</p>
+
+                    <hr>
+
+                    <h3 class="mt-4">6. CONTRIBUTION LICENSE</h3>
+
+                    <p class="mt-3">You and Services agree that we may access, store, process, and use any information and personal data that you provide and your choices (including settings).</p>
+                    <p class="mt-2">By submitting suggestions or other feedback regarding the Services, you agree that we can use and share such feedback for any purpose without compensation to you.</p>
+                    <p class="mt-2">We do not assert any ownership over your Contributions. You retain full ownership of all of your Contributions and any intellectual property rights or other proprietary rights associated with your Contributions. We are not liable for any statements or representations in your Contributions provided by you in any area on the Services. You are solely responsible for your Contributions to the Services and you expressly agree to exonerate us from any and all responsibility and to refrain from any legal action against us regarding your Contributions.</p>
+
+                    <hr>
+
+                    <h3 class="mt-4">7. SERVICES MANAGEMENT</h3>
+
+                    <p class="mt-3">We reserve the right, but not the obligation, to: (1) monitor the Services for violations of these Legal Terms; (2) take appropriate legal action against anyone who, in our sole discretion, violates the law or these Legal Terms, including without limitation, reporting such user to law enforcement authorities; (3) in our sole discretion and without limitation, refuse, restrict access to, limit the availability of, or disable (to the extent technologically feasible) any of your Contributions or any portion thereof; (4) in our sole discretion and without limitation, notice, or liability, to remove from the Services or otherwise disable all files and content that are excessive in size or are in any way burdensome to our systems; and (5) otherwise manage the Services in a manner designed to protect our rights and property and to facilitate the proper functioning of the Services.</p>
+
+                    <hr>
+
+                    <h3 class="mt-4">8. TERM AND TERMINATION</h3>
+
+                    <p class="mt-3">These Legal Terms shall remain in full force and effect while you use the Services. WITHOUT LIMITING ANY OTHER PROVISION OF THESE LEGAL TERMS, WE RESERVE THE RIGHT TO, IN OUR SOLE DISCRETION AND WITHOUT NOTICE OR LIABILITY, DENY ACCESS TO AND USE OF THE SERVICES (INCLUDING BLOCKING CERTAIN IP ADDRESSES), TO ANY PERSON FOR ANY REASON OR FOR NO REASON, INCLUDING WITHOUT LIMITATION FOR BREACH OF ANY REPRESENTATION, WARRANTY, OR COVENANT CONTAINED IN THESE LEGAL TERMS OR OF ANY APPLICABLE LAW OR REGULATION. WE MAY TERMINATE YOUR USE OR PARTICIPATION IN THE SERVICES OR DELETE ANY CONTENT OR INFORMATION THAT YOU POSTED AT ANY TIME, WITHOUT WARNING, IN OUR SOLE DISCRETION.</p>
+                    <p class="mt-2">If we terminate or suspend your account for any reason, you are prohibited from registering and creating a new account under your name, a fake or borrowed name, or the name of any third party, even if you may be acting on behalf of the third party. In addition to terminating or suspending your account, we reserve the right to take appropriate legal action, including without limitation pursuing civil, criminal, and injunctive redress.</p>
+
+                    <hr>
+
+                    <h3 class="mt-4">9. MODIFICATIONS AND INTERRUPTIONS</h3>
+
+                    <p class="mt-3">We reserve the right to change, modify, or remove the contents of the Services at any time or for any reason at our sole discretion without notice. However, we have no obligation to update any information on our Services. We will not be liable to you or any third party for any modification, price change, suspension, or discontinuance of the Services.</p>
+                    <p class="mt-2">We cannot guarantee the Services will be available at all times. We may experience hardware, software, or other problems or need to perform maintenance related to the Services, resulting in interruptions, delays, or errors. We reserve the right to change, revise, update, suspend, discontinue, or otherwise modify the Services at any time or for any reason without notice to you. You agree that we have no liability whatsoever for any loss, damage, or inconvenience caused by your inability to access or use the Services during any downtime or discontinuance of the Services. Nothing in these Legal Terms will be construed to obligate us to maintain and support the Services or to supply any corrections, updates, or releases in connection therewith.</p>
+
+                    <hr>
+                    
+                    <h3 class="mt-4">10. GOVERNING LAW</h3>
+
+                    <p class="mt-3">These Legal Terms shall be governed by and defined following the laws of India. You and Realkart Klues Pvt Ltd irrevocably consent that the courts of Bangalore, India shall have exclusive jurisdiction to resolve any dispute which may arise in connection with these Legal Terms.</p>
+
+                    <hr>
+
+                    <h3 class="mt-4">11. DISPUTE RESOLUTION</h3>
+
+                    <p class="mt-3">To expedite resolution and control the cost of any dispute, controversy, or claim related to these Legal Terms (each a "Dispute" and collectively, the "Disputes") brought by either you or us (individually, a "Party" and collectively, the "Parties"), the Parties agree to first attempt to negotiate any Dispute (except those Disputes expressly provided below) informally for at least 10 days before initiating arbitration. Such informal negotiations commence upon written notice from one Party to the other Party.</p>
+
+                    <hr>
+
+                    <h3 class="mt-4">12. CORRECTIONS</h3>
+
+                    <p class="mt-3">There may be information on the Services that contains typographical errors, inaccuracies, or omissions, including descriptions, pricing, availability, and various other information. We reserve the right to correct any errors, inaccuracies, or omissions and to change or update the information on the Services at any time, without prior notice.</p>
+
+                    <hr>
+
+                    <h3 class="mt-4">13. DISCLAIMER</h3>
+
+                    <p class="mt-3 mb-0">The Services are provided on an as-is and as-available basis. You agree that your use of the Services will be at your sole risk. To the fullest extent permitted by law, we disclaim all warranties, express or implied, in connection with the Services and your use thereof, including, without limitation, the implied warranties of merchantability, fitness for a particular purpose, and non-infringement. We make no warranties or representations about the accuracy or completeness of the Services' content or the content of any websites or mobile applications linked to the Services and we will assume no liability or responsibility for any:</p>
+                    <ol class="toc disc">
+                        <li class="mt-2">Errors, mistakes, or inaccuracies of content and materials.</li>
+                        <li class="mt-2">Personal injury or property damage, of any nature whatsoever, resulting from your access to and use of the Services.</li>
+                        <li class="mt-2">Any unauthorized access to or use of our secure servers and/or any and all personal information and/or financial information stored therein.</li>
+                        <li class="mt-2">Any interruption or cessation of transmission to or from the Services.</li>
+                        <li class="mt-2">Any bugs, viruses, trojan horses, or the like which may be transmitted to or through the Services by any third party.</li>
+                        <li class="mt-2">Any errors or omissions in any content and materials or for any loss or damage of any kind incurred as a result of the use of any content posted, transmitted, or otherwise made available via the Services.</li>
+                    </ol>
+
+                    <p class="mt-3">We do not warrant, endorse, guarantee, or assume responsibility for any product or service advertised or offered by a third party through the Services, any hyperlinked website, or any website or mobile application featured in any banner or other advertising, and we will not be a party to or in any way be responsible for monitoring any transaction between you and any third-party providers of products or services. As with the purchase of a product or service through any medium or in any environment, you should use your best judgment and exercise caution where appropriate.</p>
+
+                    <hr>
+
+                    <h3 class="mt-4">14. LIMITATIONS OF LIABILITY</h3>
+                    <p class="mt-3">In no event will we or our directors, employees, or agents be liable to you or any third party for any direct, indirect, consequential, exemplary, incidental, special, or punitive damages, including lost profit, lost revenue, loss of data, or other damages arising from your use of the Services, even if we have been advised of the possibility of such damages. Notwithstanding anything to the contrary contained herein, our liability to you for any cause whatsoever and regardless of the form of the action, will at all times be limited to the lesser of the amount paid, if any, by you to us or $100 USD.</p>
+                    <p class="mt-2">Certain US state laws and international laws do not allow limitations on implied warranties or the exclusion or limitation of certain damages. If these laws apply to you, some or all of the above disclaimers or limitations may not apply to you, and you may have additional rights.</p>
+
+                    <hr>
+
+                    <h3 class="mt-4">15. Indemnification</h3>
+                    <p class="mt-3">You agree to defend, indemnify, and hold us harmless, including our subsidiaries, affiliates, and all of our respective officers, agents, partners, and employees, from and against any loss, damage, liability, claim, or demand, including reasonable attorneys’ fees and expenses, made by any third party due to or arising out of:</p>
+                    <ol class="toc disc">
+                        <li class="mt-2">Use of the Services.</li>
+                        <li class="mt-2">Breach of these Legal Terms.</li>
+                        <li class="mt-2">Any breach of your representations and warranties set forth in these Legal Terms.</li>
+                        <li class="mt-2">Your violation of the rights of a third party, including but not limited to intellectual property rights.</li>
+                        <li class="mt-2">Any overt harmful act toward any other user of the Services with whom you connected via the Services.</li>
+                    </ol>
+
+                    <p class="mt-3">Notwithstanding the foregoing, we reserve the right, at your expense, to assume the exclusive defense and control of any matter for which you are required to indemnify us, and you agree to cooperate, at your expense, with our defense of such claims. We will use reasonable efforts to notify you of any such claim, action, or proceeding which is subject to this indemnification upon becoming aware of it.</p>
+
+                    <hr>
+
+                    <h3 class="mt-4">16. User Data</h3>
+                    <p class="mt-3">We will maintain certain data that you transmit to the Services for the purpose of managing the performance of the Services, as well as data relating to your use of the Services. Although we perform regular routine backups of data, you are solely responsible for all data that you transmit or that relates to any activity you have undertaken using the Services. You agree that we shall have no liability to you for any loss or corruption of any such data, and you hereby waive any right of action against us arising from any such loss or corruption of such data.</p>
+
+                    <hr>
+
+                    <h3 class="mt-4">17. Electronic Communications, Transactions, and Signatures</h3>
+                    <p class="mt-3">Visiting the Services, sending us emails, and completing online forms constitute electronic communications. You consent to receive electronic communications, and you agree that all agreements, notices, disclosures, and other communications we provide to you electronically, via email and on the Services, satisfy any legal requirement that such communication be in writing.</p>
+                    <p class="mt-2">You hereby agree to the use of electronic signatures, contracts, orders, and other records, and to electronic delivery of notices, policies, and records of transactions initiated or completed by us or via the Services. You hereby waive any rights or requirements under any statutes, regulations, rules, ordinances, or other laws in any jurisdiction which require an original signature or delivery or retention of non-electronic records, or to payments or the granting of credits by any means other than electronic means.</p>
+
+                    <hr>
+
+                    <h3 class="mt-4">18. Miscellaneous</h3>
+                    <p class="mt-3">These Legal Terms and any policies or operating rules posted by us on the Services or in respect to the Services constitute the entire agreement and understanding between you and us. Our failure to exercise or enforce any right or provision of these Legal Terms shall not operate as a waiver of such right or provision.</p>
+                    <p class="mt-2">These Legal Terms operate to the fullest extent permissible by law. We may assign any or all of our rights and obligations to others at any time. We shall not be responsible or liable for any loss, damage, delay, or failure to act caused by any cause beyond our reasonable control.</p>
+
+                    <hr>
+
+                    <h3 class="mt-4">Contact Us</h3>
+                    <p class="mt-3">In order to resolve a complaint regarding the Services or to receive further information regarding use of the Services, please contact us at: <a href="#">support@afflunce.in</a></p>
+
+                </article>
+                <!-- Terms of Service ENDS -->
+
+                <!-- Privacy Policy STARTS -->
+                <article id="panel-privacy" class="panel" role="tabpanel" aria-labelledby="tab-privacy" aria-hidden="true">
+                    <hr class="mt-0">
+                    <h1>Privacy Policy for Afflunce chat</h1>
+                    <div class="effective">Effective date: Month, DD YYYY</div>
+                    <p class="mt-5">At Afflunce Tech Private Limited (“Afflunce Tech Private Limited”, “we”, “us”, or “Afflunce”), we consider the protection of your personal data and the security of your information to be of the highest importance.</p>
+
+                    <p class="mb-0">We process personal data for two primary purposes:</p>
+                    <ol class="toc num">
+                        <li class="mt-2">For our own business and operational needs, and</li>
+                        <li class="mt-2">On behalf of our customers, who use the Afflunce Chat service (“Service”)
+                            to store, manage, and process data within the platform. In such cases, 
+                            we act strictly as a data processor and adhere fully to the customer’s 
+                            instructions, without using or disclosing such data for any other purpose 
+                            except to deliver the contracted Service.</li>
+                    </ol>
+
+                    <p class="mb-0">This Privacy Policy outlines in detail how we collect, process, 
+                        and use personal data for our own purposes, including data relating to 
+                        the following categories of individuals:</p>
+                    <ol class="toc disc">
+                        <li class="mt-2">Customers (brands, agencies, and creators) using Afflunce Chat, including their teams and authorized representatives,</li>
+                        <li class="mt-2">Users of our website <a href="#">(ad website link)</a>,</li>
+                        <li class="mt-2">Subscribers to our newsletters and marketing communications,</li>
+                        <li class="mt-2">Individuals participating in Afflunce Chat campaigns, beta programs, or promotional activities,</li>
+                        <li class="mt-2">Business partners, vendors, and service providers along with their representatives,</li>
+                        <li class="mt-2">Potential customers and affiliates expressing interest in our services.</li>
+                    </ol>
+
+                    <p class="mb-0">This Privacy Policy applies to information collected via:</p>
+                    <ol class="toc disc mb-2">
+                        <li class="mt-2">The Afflunce Chat platform (web and mobile applications),</li>
+                        <li class="mt-2">Our primary website (www.afflunce.chat) and any other websites operated by us where this Privacy Policy is displayed (collectively, the “Site”),</li>
+                        <li class="mt-2">Product integrations and third-party platforms linked to Afflunce Chat,</li>
+                        <li class="mt-2">Support and customer interaction channels, including emails, online forms, and chat interfaces.</li>
+                    </ol>
+                    <p class="mb-5">If you have any questions, concerns, or suggestions about our privacy practices, 
+                        or if you would like to request access to, correction of, or deletion of your 
+                        personal data or to exercise any rights afforded to you under applicable privacy 
+                        laws - please reach out to us at <a href="#">(privacy@mail.com)</a></p>
+
+                    <hr>
+
+                    <h3>Table of Contents</h3>
+                    <ol class="toc num">
+                        <li class="mt-2">How We Collect Personal Data</li>
+                        <li class="mt-2">What Types of Personal Data We Process</li>
+                        <li class="mt-2">For Which Purposes We Use Personal Data</li>
+                        <li class="mt-2">How We Share Personal Data</li>
+                        <li class="mt-2">Your Data Protection Rights & Choices</li>
+                        <li class="mt-2">For How Long We Retain Personal Data</li>
+                        <li class="mt-2">International Data Transfers</li>
+                        <li class="mt-2">Children’s Information</li>
+                        <li class="mt-2">Security</li>
+                        <li class="mt-2">Legal Basis for Processing Your Personal Data (EEA Visitors/Customers Only)</li>
+                        <li class="mt-2">For California Residents</li>
+                        <li class="mt-2">Changes to Our Privacy Policy</li>
+                        <li class="mt-2">Contacting Us</li>
+                    </ol>
+
+
+                    <hr>
+
+
+                    <h3 class="mt-4">1. How We Collect Personal Information</h3>
+
+                    <p class="mb-0 mt-4">What personal data we collect depends on your interaction with Afflunce Chat. This may include:</p>
+                    <ol class="toc disc">
+                        <li class="mt-2">When you use the Afflunce Chat Service: We store all content you provide, including your details as a customer, brand, creator, or end user. This data may be entered by you directly or pulled via integrations (e.g., Google, Instagram, Facebook, Telegram).</li>
+                        <li class="mt-2">From third parties: For example, we may receive confirmation data from payment providers like Razorpay regarding transaction status.</li>
+                        <li class="mt-2">When you contact us: If you send us emails or messages, we may store the content, attachments, and your contact details.</li>
+                        <li class="mt-2">When you submit forms or register for events: We collect data through forms on our Site (e.g., contact, sign-up, demo request, affiliate application), and from co-hosted events with partners.</li>
+                        <li class="mt-2">When you browse the Site: We collect technical data such as IP address, browser type, cookies, and page usage, which may constitute personal data.</li>
+                        <li class="mt-2">When you join our communities: If you join our groups (e.g., Facebook, Telegram), we may view your public profile and comments, though we do not copy this information into our systems.</li>
+                    </ol>
+
+
+                    <hr>
+
+                    <h3 class="mt-4">2. What Types of Personal Data We Process</h3>
+
+                    <p class="mb-0 mt-4">We collect and process the following types of personal data:</p>
+                    <ol class="toc disc">
+                        <li class="mt-2">Customer account details. To create or update your account and deliver the Service, we collect data directly from you or through third-party integrations (e.g., Google, Facebook, Instagram, Telegram). This includes your user ID, email address, account status, linked profiles, usage tier, plan details, workspace configuration, and general location.</li>
+                        <li class="mt-2">Financial information. To process payments or enable wallet payouts, we collect limited payment details such as Razorpay transaction IDs, UPI VPA, payout account information, and the last four digits of your credit/debit card, if applicable.</li>
+                        <li class="mt-2">Contact details and business information. For communication and collaboration, we collect your full name, designation, brand or company name, contact number, email ID, and other business-related identifiers. We may also store this data if you are a prospective customer or partner.</li>
+                        <li class="mt-2">Messages, forms, and communication logs. Any information you submit through support tickets, email, chat, feedback forms, or affiliate applications—such as queries, attachments, or personal notes—is stored securely along with your contact metadata.</li>
+                        <li class="mt-2">Usage data, logs, and technical identifiers. We automatically collect session metadata such as IP address, browser type, device specifications, time zone, app usage logs, page interactions, clicks, and actions taken within the platform. On mobile devices, we may also collect OS version, hardware type, and device identifiers.</li>
+                        <li class="mt-2">Email performance data. Our newsletters and platform updates may include tracking pixels to measure open rates and link clicks. Most of this data is aggregated. You may disable this tracking by blocking images in your email client.</li>
+                        <li class="mt-2">Cookies and similar technologies. When you visit our Site or log into the platform, we use cookies and related tracking tools for analytics, performance, personalization, and session management. See our Cookie Statement for more details.</li>
+                        <li class="mt-2">Customer Content. While using our Service, you may upload or import personal data belonging to third parties—such as your users, customers, prospects, or social media contacts (collectively “Subscribers”). This data is processed strictly on your behalf. We have no direct relationship with these individuals and rely on you to obtain the necessary permissions. Refer to our Data Processing Addendum for full terms.</li>
+                        <li class="mt-2">Sensitive data. We request that you do not submit or upload any sensitive personal data (such as Aadhaar numbers, health data, biometric information, political or religious views, or criminal background) to our Service.</li>
+                    </ol>
+
+
+                    <hr>
+
+                    <p class="last-text">This is the structure for Privacy policy for afflunce chat automation Please refer privacy document for entire material</p>
+
+
+                </article>
+                <!-- Privacy Policy ENDS -->
+
+
+                <!-- Cookie Statement STARTS -->
+                <article id="panel-cookies" class="panel" role="tabpanel" aria-labelledby="tab-cookies" aria-hidden="true">
+                    <hr class="mt-0">
+                    <h1>Cookie Statement</h1>
+                    <div class="effective">Effective date: Month, DD YYYY</div>
+                    
+                </article>
+                <!-- Cookie Statement ENDS -->
+
+            </section>
+        </div>
+    </div>
+
+
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script> -->
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>    
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- AOS JS -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <!-- Font Awesome 6 Pro -->
+    <script src="fontawesome-pro/js/pro.min.js"></script>
+    <script>
+        AOS.init({
+            once: true,
+        });
+    </script>
+
+    <script>
+        // Tabs controller with deep-link support
+        (function(){
+            const tabs = document.querySelectorAll('[role="tab"]');
+            const panels = {
+            terms:   document.getElementById('panel-terms'),
+            privacy: document.getElementById('panel-privacy'),
+            cookies: document.getElementById('panel-cookies'),
+            };
+
+            function activate(name, push=true){
+            tabs.forEach(t=>{
+                const on = t.dataset.target === name;
+                t.setAttribute('aria-selected', on ? 'true' : 'false');
+                t.tabIndex = on ? 0 : -1;
+            });
+            Object.entries(panels).forEach(([key, el])=>{
+                el.setAttribute('aria-hidden', key === name ? 'false' : 'true');
+            });
+            if (push) history.replaceState(null, '', `#${name}`);
+            // focus heading for accessibility when switching by hash
+            panels[name].querySelector('h1')?.focus?.();
+            }
+
+            tabs.forEach(btn=>{
+            btn.addEventListener('click', ()=> activate(btn.dataset.target));
+            btn.addEventListener('keydown', (e)=>{
+                // Arrow key navigation
+                const order = Array.from(tabs);
+                const i = order.indexOf(btn);
+                if (e.key === 'ArrowDown' || e.key === 'ArrowRight') { e.preventDefault(); order[(i+1)%order.length].focus(); }
+                if (e.key === 'ArrowUp'   || e.key === 'ArrowLeft')  { e.preventDefault(); order[(i-1+order.length)%order.length].focus(); }
+            });
+            });
+
+            // Initial tab from hash (defaults to terms)
+            const hash = location.hash.replace('#','');
+            activate(['terms','privacy','cookies'].includes(hash) ? hash : 'terms', false);
+
+            // Switch when hash changes externally
+            window.addEventListener('hashchange', ()=>{
+            const h = location.hash.replace('#','');
+            if (['terms','privacy','cookies'].includes(h)) activate(h, false);
+            });
+        })();
+        </script>
